@@ -1,3 +1,13 @@
+<script>
+export let label, color, isSelected
+</script>
+
+<button {...$$restProps} on:click aria-pressed={isSelected} class="toggleButton" style="background-color: {color}">
+  <span class="visually-hidden">{label}</span>
+  <slot />
+</button>
+
+<style>
 .toggleButton {
   width: 50px;
   height: 50px;
@@ -21,3 +31,4 @@
   color: white;
   border-width: 6px;
 }
+</style>

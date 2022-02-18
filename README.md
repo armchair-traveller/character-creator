@@ -14,7 +14,7 @@ For this workshop, we're only targeting desktops (although if you're so inclined
 
 ## Setup Instructions
 
-This project uses create-react-app.
+This project uses `@sveltejs/kit`.
 
 Start by installing dependencies:
 
@@ -25,33 +25,28 @@ npm install
 Boot up a dev server:
 
 ```
-npm run start
+npm run dev
 ```
 
 You should be able to access the application at `http://localhost:3000`.
 
 ## Project structure and context
 
-This project is built with React.
+This project is built with Svelte.
 
-**All of the functionality has already been built.** Your job is to add the CSS. You're also allowed to tweak the JSX (HTML) as-needed. But you shouldn't need to fuss with any advanced React stuff.
+**All of the functionality has already been built.** Your job is to add the CSS. You're also allowed to tweak the HTML as-needed. But you shouldn't need to fuss with any advanced Svelte stuff.
 
-This project uses **CSS Modules**. CSS modules are ultimately very similar to vanilla CSS, but the classes are applied in JS. Here's an example:
+This project uses Svelte's **scoped styles**. Scoped styles are ultimately very similar to vanilla CSS, but the styles are scoped to the component. Here's an example:
 
-```css
-/* Something.module.css */
-.wrapper {
-  width: 500px;
-}
-```
+```svelte
+<!-- Something.svelte -->
+<div class="wrapper">I'll be 500px wide!</div>
 
-```js
-/* Something.js */
-import styles from './Something.module.css';
-
-function Something() {
-  return <div className={styles.wrapper}>I'll be 500px wide!</div>;
-}
+<style>
+  .wrapper {
+    width: 500px;
+  }
+</style>
 ```
 
 Additionally, a few global styles can be found in `src/index.css`.
