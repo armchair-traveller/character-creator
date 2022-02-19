@@ -12,4 +12,10 @@ footer {
   color: white;
   text-align: center;
 }
+a {
+  color: white;
+}
+a:hover {
+  opacity: 0.85;
+}
 </style>

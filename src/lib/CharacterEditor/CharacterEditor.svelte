@@ -21,6 +21,7 @@ let body = 0,
   clothesColor = defaultClothesColor
 </script>
 
+<div class="bar-background" />
 <main class="characterEditor">
   <MaxWidthWrapper>
     <header class="header">
@@ -51,10 +52,12 @@ let body = 0,
 }
 
 .characterEditor > :global(.maxWidthWrapper:first-child) {
+  position: relative;
 }
 
-.header {
+header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -71,8 +74,22 @@ let body = 0,
 }
 
 .characterWrapper {
+  min-height: 500px;
+  position: fixed;
+  left: 65%;
+  width: 35%;
+  top: 10%;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.bar-background {
+  position: fixed;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  background-color: hsl(195deg, 20%, 86%);
 }
 </style>
